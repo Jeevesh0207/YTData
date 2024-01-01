@@ -3,6 +3,7 @@ const bodyParser=require('body-parser')
 const cors=require('cors')
 
 const YT=require('./routes/YT')
+const Search=require('./routes/Search')
 
 const app=express()
 
@@ -17,6 +18,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
 app.use('/ytdata',YT)
+app.use('/search',Search)
 
 
 
